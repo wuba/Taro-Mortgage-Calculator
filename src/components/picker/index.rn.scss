@@ -1,0 +1,25 @@
+.picker-title {
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background:rgba(248,249,251,1);
+  font-size: 32px;
+
+  &-cancel {
+    color: #474B4E;
+  }
+  &-ok {
+    font-weight: bold;
+    color: #1fb081;
+  }
+}
+
+.line {
+  display: flex;
+  height: 1px;
+  width: 100%;
+  background: #E5E5E5;
+
+}

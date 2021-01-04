@@ -1,0 +1,138 @@
+@import './index.rn.scss';
+
+/* H5样式 */
+.weui-picker {
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-bottom: constant(safe-area-inset-bottom);
+  background: #fff;
+}
+
+.weui-picker__hd {
+  background: rgba(248, 249, 251, 1);
+  display: flex;
+  align-items: center;
+
+  &::after {
+    content: none;
+  }
+}
+
+.weui-picker__action {
+  &:first-child {
+    color: #474B4E !important;
+  }
+
+  &:last-child {
+    font-weight: bold;
+    color: #1fb081 !important;
+  }
+}
+
+.weui-picker__title {
+  font-size: 32px;
+  font-family: PingFangSC-Medium, PingFang SC;
+  color: rgba(11, 15, 18, 1);
+}
+
+/* 小程序样式 */
+.selector__modal__content {
+
+  @keyframes slide-up {
+    from {
+      bottom: -45%;
+    }
+
+    to {
+      bottom: 0;
+    }
+  }
+
+  @keyframes slide-down {
+    from {
+      bottom: 0;
+    }
+
+    to {
+      bottom: -45%;
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-out {
+    from {
+      opacity: 1;
+    }
+
+    to {
+      opacity: 0;
+    }
+  }
+
+  .mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    &.slide-up {
+      animation: fade-in 0.2s linear;
+    }
+
+    &.slide-down {
+      animation: fade-out 0.2s linear;
+    }
+  }
+
+  .selector__modal {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #FFF;
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+    z-index: 999;
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-bottom: constant(safe-area-inset-bottom);
+
+    &.slide-up {
+      animation: slide-up 0.2s linear;
+    }
+
+    &.slide-down {
+      animation: slide-down 0.2s linear;
+    }
+
+  }
+
+
+  .selector__modal-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  picker-view {
+    height: 600px;
+
+    picker-view-column {
+      view {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+}

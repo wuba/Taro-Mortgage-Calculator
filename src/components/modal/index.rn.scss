@@ -1,0 +1,14 @@
+.taro-modal-content {
+  position: relative;
+}
+
+.close-icon-box {
+  position: absolute;
+  right: 20px;
+  top: -15px;
+  z-index: 999;
+}
+.close-icon {
+  width: 56px;
+  height: 56px;
+}

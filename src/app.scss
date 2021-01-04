@@ -1,0 +1,22 @@
+@import "~taro-ui/dist/style/index.scss";
+
+
+/*  #ifdef  h5  */
+* {
+  box-sizing: border-box;
+}
+taro-view-core,
+taro-text-core,
+div {
+  font-size: 32px;
+}
+/*  #endif  */
+
+/*  #ifdef  weapp  */
+view,
+text {
+  box-sizing: border-box;
+}
+/*  #endif  */
+
+

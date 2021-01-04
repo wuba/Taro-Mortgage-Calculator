@@ -1,0 +1,83 @@
+page {
+  background-color: #ffffff;
+}
+
+.calculator {
+  @import 'index.rn.scss';
+
+  width: 100%;
+  background-color: #ffffff;
+
+  .pseudo-content {
+    &__pseudo {
+      left: calc(50% - 15px);
+    }
+  }
+
+  .picker-box {
+
+    &__picker {
+      &__text {
+        display: inline-flex;
+      }
+    }
+  }
+
+  .broker {
+    box-sizing: border-box;
+
+    &-box {
+      box-sizing: border-box;
+    }
+
+    &-info {
+
+      &-companyName {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+
+    &-img {
+      border-radius: 50%;
+    }
+
+  }
+
+  .compute {
+    position: fixed;
+    height: auto !important;
+  }
+
+  .keyboard-box {
+    position: fixed;
+    bottom: 0;
+    box-sizing: border-box;
+  }
+
+  .fixed {
+    position: fixed;
+  }
+
+  .mask {
+    position: fixed;
+  }
+
+  .compute-modal {
+    padding-top: 20px;
+  }
+
+  .explain {
+
+    &-btn {
+      border: none;
+      margin-bottom: 30px;
+      &::after {
+        content: none;
+      }
+    }
+
+  }
+
+}

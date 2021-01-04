@@ -1,0 +1,12 @@
+page {
+  background-color: #ffffff;
+}
+
+.history {
+  @import './index.rn.scss';
+
+  .wrap {
+    border-style: none;
+    border-bottom: 1px solid #E7EBEE;
+  }
+}

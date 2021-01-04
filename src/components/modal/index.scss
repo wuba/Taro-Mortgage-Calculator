@@ -1,0 +1,13 @@
+@import './index.rn.scss';
+
+.at-modal-content {
+  padding: 40px 30px 30px 30px;
+
+  &-close-iocn {
+    right: 20px;
+    top: 20px;
+    width: 56px;
+    height: 56px;
+    position: absolute;
+  }
+}
