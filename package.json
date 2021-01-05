@@ -27,7 +27,7 @@
     "dev:qq": "npm run build:qq -- --watch",
     "dev:jd": "npm run build:jd -- --watch",
     "dev:quickapp": "npm run build:quickapp -- --watch",
-    "publish:pages": "yarn build:h5 && yarn gh-pages -d dist -t"
+    "publish:pages": "yarn build:h5 && yarn gh-pages -d dist/h5 -t"
   },
   "browserslist": [
     "last 3 versions",

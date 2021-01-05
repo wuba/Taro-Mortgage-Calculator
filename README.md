@@ -43,7 +43,7 @@ Taro 3 - MortgageCalculator
 
 | <center>React Native</center>| <center>小程序</center> | <center>H5</center> |
 |--------------|-------|----|
-| [demo.apk](https://github.com/wuba/Taro-Mortgage-Calculator/blob/b67d965a9c895ab69cf4245b8cd8eb09c2e7573f/app-debug.apk) <br> [taroDemo.app](https://github.com/wuba/Taro-Mortgage-Calculator/blob/5e152a87842182acd4092d0f6456bb6cd36d60fb/taroDemo.app.zip)(直接拖入IOS模拟器) | ![](./qrcode.jpg) | https://qiuz.github.io |
+| [demo.apk](https://github.com/wuba/Taro-Mortgage-Calculator/blob/b67d965a9c895ab69cf4245b8cd8eb09c2e7573f/app-debug.apk) <br> [taroDemo.app](https://github.com/wuba/Taro-Mortgage-Calculator/blob/5e152a87842182acd4092d0f6456bb6cd36d60fb/taroDemo.app.zip)(直接拖入IOS模拟器) | ![](./qrcode.jpg) | https://wuba.github.io/Taro-Mortgage-Calculator |
 
 
 
