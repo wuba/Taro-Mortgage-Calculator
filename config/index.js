@@ -50,7 +50,7 @@ const config = {
     }
   },
   h5: {
-    publicPath: "/",
+    publicPath: "/Taro-Mortgage-Calculator/",
     staticDirectory: "static",
     esnextModules: ['taro-ui'],
     postcss: {
