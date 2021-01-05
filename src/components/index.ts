@@ -15,3 +15,4 @@ export { default as LinearGradient } from "./linear-gradient";
 export { default as KeyboardAwareScrollView } from "./keyboard-aware-scroll-view";
 export { default as Modal } from "./modal";
 export { default as Pciker } from "./picker";
+export { default as StatusBar } from "./status-bar";

@@ -70,7 +70,14 @@ const config = {
       }
     }
   },
-  rn: {}
+  rn: {
+    output: {
+      ios: 'ios/main.jsbundle',
+      iosAssetsDest: 'ios',
+      android: 'android/app/src/main/assets/index.android.bundle',
+      androidAssetsDest: 'android/app/src/main/res'
+    },
+  }
 };
 
 module.exports = function(merge) {

@@ -261,7 +261,6 @@
   left: 0;
   right: 0;
   width: 100%;
-  padding: 16px 0;
   z-index: 10;
   background: rgba(255, 255, 255, 1);
   display: flex;
@@ -269,7 +268,7 @@
   justify-content: center;
 
   &-btn {
-    margin: 0 auto;
+    margin: 16px auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -278,6 +277,7 @@
     background: rgba(35, 201, 147, 1);
     border-radius: 4px;
     text-align: center;
+    flex: 1;
 
     &-text {
       font-size: 36px;

@@ -10,7 +10,12 @@ import Taro, { getCurrentInstance } from "@tarojs/taro";
 import { View, Text, Input } from "@tarojs/components";
 import "./index.scss";
 
-import { KeyboardAwareScrollView, SafeAreaView, BoxShadow } from "@components";
+import {
+  KeyboardAwareScrollView,
+  SafeAreaView,
+  BoxShadow,
+  StatusBar
+} from "@components";
 import HouseLoanComputeHeader from "./compute-header";
 import { TitleTpl } from "./title-tpl";
 import { LineWrap } from "./line-wrap";
@@ -82,7 +87,9 @@ export default class HouseLoanCompute extends Component<any, any> {
       loanLrpType: 1,
       downPayRateCustom: "",
       // 安卓上 手动输入时 隐藏计算按钮
-      btnOpacity: 1
+      btnOpacity: 1,
+      // 安卓状态栏
+      backgroundColor: "#fff"
     };
   }
 
@@ -665,15 +672,17 @@ export default class HouseLoanCompute extends Component<any, any> {
         loanAmount,
         tip
       };
+      const backgroundColor = "#12B983";
       this.setState({
         tip,
         showResult: true,
         equalInterestPayMonth: res.equalInterest.payMonth,
-        equalPrincipalPayMonth: res.equalPrincipal.payMonth
+        equalPrincipalPayMonth: res.equalPrincipal.payMonth,
+        backgroundColor
       });
       Taro.setNavigationBarColor({
         frontColor: "#ffffff",
-        backgroundColor: "#12B983"
+        backgroundColor
       });
       IS_RN
         ? this.scroll.scrollTo({ x: 0, animation: true })
@@ -734,11 +743,13 @@ export default class HouseLoanCompute extends Component<any, any> {
       userLoanWay,
       equalInterestPayMonth,
       equalPrincipalPayMonth,
-      showResult
+      showResult,
+      backgroundColor
     } = this.state;
     const { houseTotal, downPayRate } = params;
     return (
       <SafeAreaView className="calculator">
+        <StatusBar backgroundColor={backgroundColor} barStyle="dark-content" />
         {keyboardHeight >= 0 && (
           <View className="fixed">
             <View className="mask" />
@@ -838,28 +849,27 @@ export default class HouseLoanCompute extends Component<any, any> {
           </View>
         </KeyboardAwareScrollView>
 
-        <BoxShadow
-          shadowColor="#000"
-          shadowOffset={{
-            width: 0,
-            height: 1
-          }}
-          shadowOpacity={0.25}
-          shadowRadius={3}
-          elevation={5}
-          className="compute"
-          style={{
-            opacity: btnOpacity,
-            height: isAndriod() ? 65 : 100
-          }}
-          boxShadow="0px 2px 8px 0px rgba(211,215,218,1)"
-        >
-          <SafeAreaView>
+        <SafeAreaView>
+          <BoxShadow
+            shadowColor="#000"
+            shadowOffset={{
+              width: 0,
+              height: -1
+            }}
+            shadowOpacity={0.1}
+            shadowRadius={1}
+            elevation={5}
+            className="compute"
+            style={{
+              opacity: btnOpacity
+            }}
+            boxShadow="0px 2px 8px 0px rgba(211,215,218,1)"
+          >
             <View className="compute-btn" onClick={this.submit}>
               <Text className="compute-btn-text">开始计算</Text>
             </View>
-          </SafeAreaView>
-        </BoxShadow>
+          </BoxShadow>
+        </SafeAreaView>
       </SafeAreaView>
     );
   }

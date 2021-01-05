@@ -15,8 +15,8 @@ import {
   CHECK_RIDIO
 } from "../constans";
 import "./index.scss";
-import TaroSafeAreaView from "@components/safe-area-view";
 import { getGlobalData, getStorageData } from "@utils";
+import { SafeAreaView, StatusBar } from "@components";
 
 export default class HouseLoanComputeMontylyPayments extends Component<
   any,
@@ -102,7 +102,8 @@ export default class HouseLoanComputeMontylyPayments extends Component<
       tip
     } = this.state;
     return (
-      <TaroSafeAreaView className="montyly-payments">
+      <SafeAreaView className="montyly-payments">
+        <StatusBar backgroundColor="#fff" barStyle="dark-content" />
         <ScrollView
           className="scroll-content"
           scrollY
@@ -195,7 +196,7 @@ export default class HouseLoanComputeMontylyPayments extends Component<
             </View>
           </View>
         </ScrollView>
-      </TaroSafeAreaView>
+      </SafeAreaView>
     );
   }
 }

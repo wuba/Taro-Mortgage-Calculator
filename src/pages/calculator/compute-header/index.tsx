@@ -15,8 +15,7 @@ import {
   RIGHT_ARROW,
   RIGHT_ARROW_WHITE
 } from "../constans";
-import TaroLinearGradient from "@components/linear-gradient";
-import BoxShadow from "@components/box-shadow";
+import { BoxShadow, LinearGradient } from "@components";
 import { fomatFloat } from "@utils";
 
 interface HouseLoanComputeHeaderProps {
@@ -48,7 +47,7 @@ const HouseLoanComputeHeader: FunctionComponent<HouseLoanComputeHeaderProps> & {
 
   return (
     <View className="_h_l_c-header__content">
-      <TaroLinearGradient
+      <LinearGradient
         locations={[0, 0.75, 1]}
         src={GRADIENT_BG}
         colors={["#12BA83", "#12BA83", "#9AE7CD"]}
@@ -84,7 +83,7 @@ const HouseLoanComputeHeader: FunctionComponent<HouseLoanComputeHeaderProps> & {
           </View>
           <Text className="_h_l_c-header-header__tip">{tip}</Text>
         </View>
-      </TaroLinearGradient>
+      </LinearGradient>
       <BoxShadow
         shadowColor="#E7EBEE"
         shadowOffset={{

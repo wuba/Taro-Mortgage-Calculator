@@ -6,10 +6,10 @@
  */
 
 import React, { Component } from "react";
-import Taro from "@tarojs/taro";
 import { View, Text } from "@tarojs/components";
 import "./index.scss";
-import TaroSafeAreaView from "@components/safe-area-view";
+import { SafeAreaView, StatusBar } from "@components";
+import { getStorageData } from "@utils";
 
 export default class HouseLoanComputeMontylyPayments extends Component<
   any,
@@ -23,22 +23,17 @@ export default class HouseLoanComputeMontylyPayments extends Component<
   }
 
   async componentDidMount() {
-    let list: any = [];
-    try {
-      const { data = [] } = await Taro.getStorage({ key: "LOAN_HISTORY" });
-      list = data;
-    } catch (error) {
-      console.log(error);
-    }
+    const data = await getStorageData("LOAN_HISTORY") || {};
     this.setState({
-      historyList: list
+      historyList: data
     });
   }
 
   render() {
     const { historyList = [] } = this.state;
     return (
-      <TaroSafeAreaView className="history">
+      <SafeAreaView className="history">
+        <StatusBar backgroundColor="#fff" barStyle="dark-content" />
         <View className="history-content">
           {historyList.map((item: any, index: number) => {
             return (
@@ -61,7 +56,7 @@ export default class HouseLoanComputeMontylyPayments extends Component<
             );
           })}
         </View>
-      </TaroSafeAreaView>
+      </SafeAreaView>
     );
   }
 }

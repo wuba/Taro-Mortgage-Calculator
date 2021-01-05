@@ -16,6 +16,7 @@ if (IS_RN) {
 
 function TaroSafeAreaView(props: any) {
   const { className = "", style = {} } = props;
+
   if (IS_RN) {
     return (
       <SafeAreaView className={`safe-area-view ${className}`} style={style}>
