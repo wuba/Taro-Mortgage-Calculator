@@ -74,8 +74,8 @@ const config = {
     output: {
       ios: 'ios/main.jsbundle',
       iosAssetsDest: 'ios',
-      android: 'android/app/src/main/assets/index.android.bundle',
-      androidAssetsDest: 'android/app/src/main/res'
+      android: 'android/index.android.bundle',
+      androidAssetsDest: 'android'
     },
   }
 };

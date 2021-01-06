@@ -16,7 +16,7 @@
     "build:h5": "taro build --type h5",
     "build:rn": "taro build --type rn",
     "build:rn-ios": "taro build --type rn --platform ios",
-    "build:rn-andriod": "taro build --type rn --platform andriod",
+    "build:rn-android": "taro build --type rn --platform android",
     "build:qq": "taro build --type qq",
     "build:jd": "taro build --type jd",
     "build:quickapp": "taro build --type quickapp",
