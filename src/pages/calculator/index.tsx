@@ -7,9 +7,8 @@
 
 import React, { Component } from "react";
 import Taro, { getCurrentInstance } from "@tarojs/taro";
-import { View, Text, Input } from "@tarojs/components";
+import { View, Text, Input, Video } from "@tarojs/components";
 import "./index.scss";
-
 import {
   KeyboardAwareScrollView,
   SafeAreaView,
@@ -25,7 +24,8 @@ import {
   LOAN_WAY_TITLE,
   LIST_TYPE,
   COMPUTE_WAY,
-  OPTION
+  OPTION,
+  DEMO_VIDEO
 } from "./constans";
 import { equalInterestCalc } from "./helper";
 import { isAndriod, setGlobalData, getStorageData, fomatFloat } from "@utils";
@@ -845,6 +845,16 @@ export default class HouseLoanCompute extends Component<any, any> {
               onBlur={this.checkAccumulatLoanAmount}
               onChangePicker={this.onChangePicker}
               onInputChange={this.onInputChange}
+            />
+
+            <Video
+              className="video"
+              src={DEMO_VIDEO}
+              controls={false}
+              showFullscreenBtn={false}
+              autoplay
+              loop
+              muted
             />
           </View>
         </KeyboardAwareScrollView>

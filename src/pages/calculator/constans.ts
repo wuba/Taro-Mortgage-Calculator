@@ -20,6 +20,8 @@ import CHECK_RIDIO from "../../assets/images/comm_form_icon_weigouxuan.png";
 import PERCENT_ICON from "../../assets/images/esf_calculator_img_percent.png";
 import GRADIENT_BG from "../../assets/images/esf_calculator_img_bggradient.png";
 
+import DEMO_VIDEO from '../../assets/video/anjuke_TVC_15s_1920x1080_20201224.mp4';
+
 export {
   RIGHT_ARROW,
   PERCENT_ICON,
@@ -28,7 +30,8 @@ export {
   REPORT_BG_BUILDING,
   CHECK_RIDIO_Y,
   CHECK_RIDIO,
-  GRADIENT_BG
+  GRADIENT_BG,
+  DEMO_VIDEO
 };
 
 export const LIST_TYPE = {
