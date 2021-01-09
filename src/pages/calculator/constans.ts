@@ -22,6 +22,10 @@ import GRADIENT_BG from "../../assets/images/esf_calculator_img_bggradient.png";
 
 const DEMO_VIDEO = 'https://wuba.github.io/Taro-Mortgage-Calculator/static/media/anjuke_TVC_15s_1920x1080_20201224.mp4';
 
+if (process.env.TARO_ENV === 'h5') {
+  require('../../assets/video/anjuke_TVC_15s_1920x1080_20201224.mp4');
+}
+
 export {
   RIGHT_ARROW,
   PERCENT_ICON,
