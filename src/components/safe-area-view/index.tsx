@@ -8,28 +8,33 @@
 import React from "react";
 import { View } from "@tarojs/components";
 import "./index.scss";
+import { TaroSafeAreaViewType } from "./type";
 
 let SafeAreaView: any;
-if (IS_RN) {
-  SafeAreaView = require("react-native").SafeAreaView;
+if (process.env.TARO_ENV === "rn") {
+  SafeAreaView = require("react-native-safe-area-context").SafeAreaView;
 }
 
-function TaroSafeAreaView(props: any) {
-  const { className = "", style = {} } = props;
+const TaroSafeAreaView: TaroSafeAreaViewType = props => {
+  const { className = "", style = {}, edges = ["right", "bottom", "left"] } = props;
 
-  if (IS_RN) {
+  if (process.env.TARO_ENV === "rn") {
     return (
-      <SafeAreaView className={`safe-area-view ${className}`} style={style}>
+      <SafeAreaView
+        edges={edges}
+        className={`safe-area-view ${className}`}
+        style={style}
+      >
         {props.children}
       </SafeAreaView>
     );
   }
   return (
-    <View className={`safe-area-view ${className}`} style={{ ...style }}>
+    <View className={`safe-area-view ${className}`} style={{ ...(style as object) }}>
       {props.children}
     </View>
   );
-}
+};
 
 TaroSafeAreaView.options = {
   addGlobalClass: true

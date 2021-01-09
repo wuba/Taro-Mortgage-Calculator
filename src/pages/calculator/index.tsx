@@ -859,27 +859,27 @@ export default class HouseLoanCompute extends Component<any, any> {
           </View>
         </KeyboardAwareScrollView>
 
-        <SafeAreaView>
-          <BoxShadow
-            shadowColor="#000"
-            shadowOffset={{
-              width: 0,
-              height: -1
-            }}
-            shadowOpacity={0.1}
-            shadowRadius={1}
-            elevation={5}
-            className="compute"
-            style={{
-              opacity: btnOpacity
-            }}
-            boxShadow="0px 2px 8px 0px rgba(211,215,218,1)"
-          >
+        <BoxShadow
+          shadowColor="#000"
+          shadowOffset={{
+            width: 0,
+            height: -1
+          }}
+          shadowOpacity={0.1}
+          shadowRadius={1}
+          elevation={5}
+          className="compute"
+          style={{
+            opacity: btnOpacity,
+          }}
+          boxShadow="0px 2px 8px 0px rgba(211,215,218,1)"
+        >
+          <SafeAreaView>
             <View className="compute-btn" onClick={this.submit}>
               <Text className="compute-btn-text">开始计算</Text>
             </View>
-          </BoxShadow>
-        </SafeAreaView>
+          </SafeAreaView>
+        </BoxShadow>
       </SafeAreaView>
     );
   }

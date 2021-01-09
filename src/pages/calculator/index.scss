@@ -73,11 +73,20 @@ page {
     &-btn {
       border: none;
       margin-bottom: 30px;
+
       &::after {
         content: none;
       }
     }
 
   }
+
+  /*  #ifdef  h5  */
+  // h5中视频控制跳 在controls={false} showFullscreenBtn={false}时还存在 这里直接通过样式隐藏
+  taro-video-control {
+    display: none;
+  }
+  /*  #endif  */
+
 
 }

@@ -20,7 +20,7 @@ import CHECK_RIDIO from "../../assets/images/comm_form_icon_weigouxuan.png";
 import PERCENT_ICON from "../../assets/images/esf_calculator_img_percent.png";
 import GRADIENT_BG from "../../assets/images/esf_calculator_img_bggradient.png";
 
-import DEMO_VIDEO from '../../assets/video/anjuke_TVC_15s_1920x1080_20201224.mp4';
+const DEMO_VIDEO = 'https://wuba.github.io/Taro-Mortgage-Calculator/static/media/anjuke_TVC_15s_1920x1080_20201224.mp4';
 
 export {
   RIGHT_ARROW,
