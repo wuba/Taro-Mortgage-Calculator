@@ -14,7 +14,7 @@
     "react/self-closing-comp": 1,
     "react/no-multi-comp": 0,
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }],
-    // "@typescript-eslint/no-unused-vars": ["warning", { "varsIgnorePattern": "Taro" }],
+    "@typescript-eslint/no-unused-vars": [1, { "varsIgnorePattern": "React" }],
     "@typescript-eslint/no-undef": 0,
     "@typescript-eslint/explicit-function-return-type": 0,
     "@typescript-eslint/no-empty-function": 0,

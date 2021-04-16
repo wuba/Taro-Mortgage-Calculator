@@ -98,8 +98,7 @@ export default class HouseLoanCompute extends Component<any, any> {
   }
 
   async componentDidShow() {
-    const { title = "等额本息" } =
-      (await getStorageData("USER_LOAN_WAY")) || {};
+    const { title = "等额本息" } = await getStorageData("USER_LOAN_WAY") || {};
     this.setState({ userLoanWay: title });
   }
 
@@ -445,6 +444,7 @@ export default class HouseLoanCompute extends Component<any, any> {
    */
   onKeyboardDidShow = (frames: Record<string, any>) => {
     const { endCoordinates } = frames;
+    console.log(endCoordinates);
     this.setState({
       btnOpacity: 0,
       keyboardHeight: endCoordinates.height
