@@ -60,7 +60,7 @@
     "lodash": "4.17.19",
     "react": "^16.10.0",
     "react-dom": "^16.10.0",
-    "react-native": "^0.63.0",
+    "react-native": "^0.64.0",
     "taro-ui": "^3.0.0-alpha.3"
   },
   "devDependencies": {
