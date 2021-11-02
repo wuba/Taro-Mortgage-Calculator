@@ -26,6 +26,7 @@
     "import/prefer-default-export": 0,
     "@typescript-eslint/camelcase": 0,
     "@typescript-eslint/ban-ts-ignore": 0,
-    "@typescript-eslint/no-inferrable-types": 0
+    "@typescript-eslint/no-inferrable-types": 0,
+    "@typescript-eslint/no-shadow": 0
   }
 }
