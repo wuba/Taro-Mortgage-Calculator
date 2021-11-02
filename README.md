@@ -45,7 +45,11 @@ Taro 3 - MortgageCalculator
 |--------------|-------|----|
 | 安卓：[taroDemo.apk](https://github.com/wuba/Taro-Mortgage-Calculator/raw/e0c432bdc6096a08d9020542e7ce401861026bfa/app-arm64-v8a-release.apk.1.zip) <br> IOS：[taroDemo.app](https://github.com/wuba/Taro-Mortgage-Calculator/raw/a67459bc6667b0478978621482d33103d04e7538/taroDemo.app.zip)(IOS模拟器包) | ![](./mini-qrcode.jpg) | ![](./h5-qrcode.png)<br>https://wuba.github.io/Taro-Mortgage-Calculator |
 
+## 使用 Taro Playground 预览
 
+0. 下载安装 [Taro Playground](https://github.com/wuba/taro-playground#app-download)。
+1. 本地运行 `yarn dev:rn`，打印二维码。
+2. 使用 APP 扫描二维码加载 bundle，进行预览。
 
 ## 本地运行
 
@@ -59,11 +63,8 @@ Taro 3 - MortgageCalculator
   # 安装依赖
   yarn
   
-  # 运行RN 默认端口8080
+  # 运行RN 默认端口8081
   yarn dev:rn
-
-  # 指定8081
-  yarn dev:rn --port 8081
 
   # 运行微信小程序
   yarn dev:weapp
@@ -72,5 +73,6 @@ Taro 3 - MortgageCalculator
   yarn dev:h5
 ```
 
+## License
 
-
+MIT

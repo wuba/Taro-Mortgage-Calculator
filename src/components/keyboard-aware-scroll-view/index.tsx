@@ -11,7 +11,7 @@ import "./index.scss";
 
 let KeyboardAwareScrollView: any;
 if (IS_RN) {
-  KeyboardAwareScrollView = require("react-native-keyboard-aware-scroll-view")
+  KeyboardAwareScrollView = require("@codler/react-native-keyboard-aware-scroll-view")
     .KeyboardAwareScrollView;
 }
 
