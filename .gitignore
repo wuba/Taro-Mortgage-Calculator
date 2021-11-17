@@ -171,3 +171,6 @@ _book
 temp
 website/build
 website/package.json
+
+## taro-react-native-release
+!release/**
