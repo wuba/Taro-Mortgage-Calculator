@@ -48,7 +48,7 @@ Taro 3 - MortgageCalculator
 ## 使用 Taro Playground 预览
 
 0. 下载安装 [Taro Playground](https://github.com/wuba/taro-playground#app-download)。
-1. 本地运行 `yarn dev:rn`，打印二维码。
+1. 本地运行 `yarn dev:rn`，打印二维码。或者打开[releases](https://github.com/wuba/Taro-Mortgage-Calculator/releases)页面。
 2. 使用 APP 扫描二维码加载 bundle，进行预览。
 
 ## 本地运行
