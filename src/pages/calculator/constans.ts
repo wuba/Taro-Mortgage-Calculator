@@ -20,8 +20,6 @@ import CHECK_RIDIO from "../../assets/images/comm_form_icon_weigouxuan.png";
 import PERCENT_ICON from "../../assets/images/esf_calculator_img_percent.png";
 import GRADIENT_BG from "../../assets/images/esf_calculator_img_bggradient.png";
 
-const DEMO_VIDEO = 'https://wos2.58cdn.com.cn/DeFazYxWvDti/frsupload/bed49a933db6b5deedd8b868ec9c8bca.mp4';
-
 export {
   RIGHT_ARROW,
   PERCENT_ICON,
@@ -31,7 +29,6 @@ export {
   CHECK_RIDIO_Y,
   CHECK_RIDIO,
   GRADIENT_BG,
-  DEMO_VIDEO
 };
 
 export const LIST_TYPE = {
