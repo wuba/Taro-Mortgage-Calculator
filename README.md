@@ -9,7 +9,7 @@ Taro 3 - MortgageCalculator
 基于Taro 3开发的多端（React Native、Weapp、H5）实例
 
 
-> 开发React Native， 推荐阅读[React Native 端开发流程](https://nervjs.github.io/taro/docs/3.2.0-canary.3/react-native)和[React Native 端开发前注意](https://nervjs.github.io/taro/docs/3.2.0-canary.3/react-native-remind)
+> 开发React Native， 推荐阅读[React Native 端开发流程](https://nervjs.github.io/taro/docs/react-native)和[React Native 端开发前注意](https://nervjs.github.io/taro/docs/react-native-remind)
 
 
 ### 项目介绍
