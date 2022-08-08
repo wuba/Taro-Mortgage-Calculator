@@ -65,14 +65,14 @@
     "react-dom": "^17.0.2",
     "react-native": "^0.68.2",
     "react-refresh": "^0.14.0",
+    "webpack": "5.69.0",
     "taro-ui": "^3.0.0-alpha.3"
   },
   "devDependencies": {
     "@babel/core": "^7.8.0",
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
-    "@tarojs/mini-runner": "^3.5.2",
-    "@tarojs/webpack-runner": "^3.5.2",
+    "@tarojs/webpack5-runner": "^3.5.2",
     "@types/react": "^17.0.2",
     "@types/webpack-env": "^1.13.6",
     "@typescript-eslint/eslint-plugin": "^2.x",
