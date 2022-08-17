@@ -37,6 +37,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           appname: Taro-Mortgage-calculator
           logo: https://pic3.58cdn.com.cn/nowater/fangfe/n_v25b1523466b894881b9bdeda7618a8af2.png
+          prerelease: ${{ contains(github.ref, 'beta') }}
       - name: Upload Qr Image
         uses: actions/upload-artifact@v2
         with:
