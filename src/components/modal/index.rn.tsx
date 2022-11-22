@@ -11,11 +11,8 @@ import Modal from '@ant-design/react-native/lib/modal';
 import './index.scss';
 import { CLOSE_ICON } from './constant';
 import { TaroModalProps } from './type';
-import { ComponentOptions } from "@tarojs/taro";
 
-const TaroModal: FunctionComponent<TaroModalProps> & {
-  options?: ComponentOptions;
-} = (props) => {
+const TaroModal: FunctionComponent<TaroModalProps> = (props) => {
   const { visible = false, closable = false, onClose = () => {}, closeIconStyle = {}, closeIconName = '' , animationType = 'fade' } = props;
 
   return (
@@ -38,10 +35,5 @@ const TaroModal: FunctionComponent<TaroModalProps> & {
     </Modal>
   );
 };
-
-TaroModal.options = {
-  addGlobalClass: true,
-};
-
 
 export default TaroModal;

@@ -5,17 +5,14 @@
  * @Last Modified by: qiuz
  */
 
-import React from "react";
-import { ComponentOptions, FunctionComponent } from '@tarojs/taro';
+import React, { FunctionComponent } from "react";
 import { AtModal } from 'taro-ui';
 import './index.scss';
 import { View, Image } from '@tarojs/components';
 import { CLOSE_ICON } from './constant';
 import { TaroModalProps } from './type';
 
-const TaroModal: FunctionComponent<TaroModalProps> & {
-  options?: ComponentOptions;
-} = (props) => {
+const TaroModal: FunctionComponent<TaroModalProps> = (props) => {
   const { visible = false, closable = false, onClose = () => {} } = props;
 
   return (
@@ -26,10 +23,6 @@ const TaroModal: FunctionComponent<TaroModalProps> & {
       <View className="at-modal-content">{props.children}</View>
     </AtModal>
   );
-};
-
-TaroModal.options = {
-  addGlobalClass: true,
 };
 
 export default TaroModal;

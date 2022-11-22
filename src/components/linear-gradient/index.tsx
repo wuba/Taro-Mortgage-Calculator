@@ -7,7 +7,6 @@
  */
 
 import React, { FunctionComponent } from "react";
-import { ComponentOptions } from "@tarojs/taro";
 import { View, Image } from "@tarojs/components";
 import { LinearGradientProps } from "react-native-linear-gradient";
 import "./index.scss";
@@ -36,9 +35,7 @@ export interface LinearGradientType extends LinearGradientProps {
 
 const TaroLinearGradient: FunctionComponent<
   LinearGradientType & TaroLinearGradientProps
-> & {
-  options?: ComponentOptions;
-} = props => {
+> = props => {
   const {
     src = "",
     style = {},
@@ -108,10 +105,6 @@ const TaroLinearGradient: FunctionComponent<
       {props.children}
     </View>
   );
-};
-
-TaroLinearGradient.options = {
-  addGlobalClass: true
 };
 
 export default TaroLinearGradient;

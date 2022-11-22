@@ -8,7 +8,12 @@ const config = {
     750: 1,
     828: 1.81 / 2
   },
-  compiler: 'webpack5',
+  compiler: {
+    type: 'webpack5',
+    prebundle: {
+      enable: false,
+    },
+  },
   sourceRoot: "src",
   outputRoot: `dist/${process.env.TARO_ENV}`,
   plugins: [],

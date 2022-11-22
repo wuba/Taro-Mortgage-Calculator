@@ -6,7 +6,6 @@
  */
 
 import React, { FunctionComponent } from "react";
-import { ComponentOptions } from "@tarojs/taro";
 import { View, Text } from "@tarojs/components";
 import "./index.scss";
 
@@ -17,9 +16,7 @@ interface TitleTplProps {
   onWayClick: (...args: any) => void;
 }
 
-export const TitleTpl: FunctionComponent<TitleTplProps> & {
-  options?: ComponentOptions;
-} = props => {
+export const TitleTpl: FunctionComponent<TitleTplProps> = props => {
   const {
     title = "",
     data = [],
@@ -60,8 +57,4 @@ export const TitleTpl: FunctionComponent<TitleTplProps> & {
       </View>
     </View>
   );
-};
-
-TitleTpl.options = {
-  addGlobalClass: true
 };

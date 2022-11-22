@@ -36,8 +36,4 @@ const TaroSafeAreaView: TaroSafeAreaViewType = props => {
   );
 };
 
-TaroSafeAreaView.options = {
-  addGlobalClass: true
-};
-
 export default TaroSafeAreaView;

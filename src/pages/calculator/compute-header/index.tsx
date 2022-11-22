@@ -6,7 +6,6 @@
  */
 
 import React, { FunctionComponent } from "react";
-import { ComponentOptions } from "@tarojs/taro";
 import { View, Text, Image } from "@tarojs/components";
 import "./index.scss";
 import {
@@ -30,9 +29,7 @@ interface HouseLoanComputeHeaderProps {
   goMonthlyPayments: () => void;
 }
 
-const HouseLoanComputeHeader: FunctionComponent<HouseLoanComputeHeaderProps> & {
-  options?: ComponentOptions;
-} = props => {
+const HouseLoanComputeHeader: FunctionComponent<HouseLoanComputeHeaderProps> = props => {
   const {
     way,
     houseTotal,
@@ -154,10 +151,6 @@ const HouseLoanComputeHeader: FunctionComponent<HouseLoanComputeHeaderProps> & {
       </BoxShadow>
     </View>
   );
-};
-
-HouseLoanComputeHeader.options = {
-  addGlobalClass: true
 };
 
 export default React.memo(HouseLoanComputeHeader);

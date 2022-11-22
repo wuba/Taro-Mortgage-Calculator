@@ -5,7 +5,7 @@
  * @Last Modified by: qiuz
  */
 
-import { Color, ComponentOptions } from "@tarojs/taro";
+import { Color } from "@tarojs/taro";
 import { View } from "@tarojs/components";
 import React, { FunctionComponent, CSSProperties } from "react";
 import "./index.scss";
@@ -29,9 +29,7 @@ interface BoxShadowProps {
   style?: CSSProperties;
 }
 
-const BoxShadow: FunctionComponent<BoxShadowProps> & {
-  options?: ComponentOptions;
-} = props => {
+const BoxShadow: FunctionComponent<BoxShadowProps> = props => {
   const {
     shadowColor = "#000",
     shadowOffset = { width: 0, height: 0 },
@@ -71,10 +69,6 @@ const BoxShadow: FunctionComponent<BoxShadowProps> & {
       {props.children}
     </View>
   );
-};
-
-BoxShadow.options = {
-  addGlobalClass: true
 };
 
 export default BoxShadow;

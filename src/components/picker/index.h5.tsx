@@ -5,16 +5,13 @@
  * @Last Modified by: qiuz
  */
 
-import React from "react";
-import { ComponentOptions, FunctionComponent } from "@tarojs/taro";
+import React, { FunctionComponent } from "react";
 import { Picker } from "@tarojs/components";
 import { isArray } from "@utils";
 import "./index.scss";
 import { TaroPickerSelectorProps, RangeItem } from "./type";
 
-const TaroPickerSelector: FunctionComponent<TaroPickerSelectorProps> & {
-  options?: ComponentOptions;
-} = props => {
+const TaroPickerSelector: FunctionComponent<TaroPickerSelectorProps> = props => {
   const {
     range = [],
     onChange = () => {},
@@ -79,10 +76,6 @@ const TaroPickerSelector: FunctionComponent<TaroPickerSelectorProps> & {
       {props.children}
     </Picker>
   );
-};
-
-TaroPickerSelector.options = {
-  addGlobalClass: true
 };
 
 export default TaroPickerSelector;
