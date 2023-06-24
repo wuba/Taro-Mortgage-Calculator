@@ -19,7 +19,7 @@ export const getStorageData = async (key: string) => {
 };
 
 // num为传入的值，n为保留的小数位
-export const fomatFloat = (num: number | string, n: number) => {
+export const formatFloat = (num: number | string, n: number) => {
   let f = parseFloat(num as string);
   if (Number.isNaN(f)) {
     return false;

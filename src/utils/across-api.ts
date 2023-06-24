@@ -12,7 +12,7 @@ if (IS_RN) {
   RN = require("react-native");
 }
 
-export const isAndriod = () => {
+export const isAndroid = () => {
   if (IS_RN) {
     return RN.Platform.OS === "android";
   }

@@ -25,9 +25,9 @@ import {
   LIST_TYPE,
   COMPUTE_WAY,
   OPTION,
-} from "./constans";
+} from "./constants";
 import { equalInterestCalc } from "./helper";
-import { isAndriod, setGlobalData, getStorageData, fomatFloat } from "@utils";
+import { isAndroid, setGlobalData, getStorageData, formatFloat } from "@utils";
 
 export default class HouseLoanCompute extends Component<any, any> {
   loading: any;
@@ -117,7 +117,7 @@ export default class HouseLoanCompute extends Component<any, any> {
       params.commercialLoanBasePoint
     }‱ = `;
 
-    const commerceLoanRateNewUnit = `${fomatFloat(
+    const commerceLoanRateNewUnit = `${formatFloat(
       commerceLoanRateNew * 100,
       2
     )}%`;
@@ -139,7 +139,7 @@ export default class HouseLoanCompute extends Component<any, any> {
    */
   getData = () => {
     const { params } = this.state;
-    const { defult, options } = OPTION;
+    const { default: defaultData, options } = OPTION;
     // 处理首付比例 手动输入选项 以及公积金利率一年 五年 商贷利率
     const {
       downPayRate = [],
@@ -155,14 +155,14 @@ export default class HouseLoanCompute extends Component<any, any> {
     });
     this.handleDownPaySelectLabel(params.houseTotal, downPayRate);
     params.loanAmount = Math.ceil(
-      this.handleAmount(params.houseTotal, defult.downPayRate) as number
+      this.handleAmount(params.houseTotal, defaultData.downPayRate) as number
     );
     // 处理旧版商贷利率 关联 商贷年限
     commerceLoanRate.forEach((rate: any) => {
       // 大于五年
       rate.limit = "outFive";
     });
-    params.commerceOutFiveLoanRate = defult.commerceLoanRate;
+    params.commerceOutFiveLoanRate = defaultData.commerceLoanRate;
     commerceLoanInFiveYearRate.forEach((rate: any) => {
       // 2-5年期
       rate.limit = "inFive";
@@ -181,7 +181,7 @@ export default class HouseLoanCompute extends Component<any, any> {
       // >5年期
       rate.limit = "outFive";
     });
-    params.accumulatOutFiveFundRate = defult.accumulatFundRate;
+    params.accumulatOutFiveFundRate = defaultData.accumulatFundRate;
     accumulatFundInFiveYearRate.forEach((rate: any) => {
       // <=5年期
       rate.limit = "inFive";
@@ -190,15 +190,15 @@ export default class HouseLoanCompute extends Component<any, any> {
       ...accumulatFundRate,
       ...accumulatFundInFiveYearRate
     ];
-    const commerceLoanRateNew = fomatFloat(
-      defult.loanLrp + params.commercialLoanBasePoint / 10000,
+    const commerceLoanRateNew = formatFloat(
+      defaultData.loanLrp + params.commercialLoanBasePoint / 10000,
       4
     );
     this.setState(
       {
         ...OPTION,
         commerceLoanRateNew,
-        params: { ...params, ...defult }
+        params: { ...params, ...defaultData }
       },
       () => {
         this.getRenderList();
@@ -290,7 +290,7 @@ export default class HouseLoanCompute extends Component<any, any> {
     list.forEach((pay: any) => {
       pay.labelCopy = pay.labelCopy || pay.label;
       const amount = Math.floor(
-        fomatFloat(pay.value * parseInt(data as string, 10), 1) as number
+        formatFloat(pay.value * parseInt(data as string, 10), 1) as number
       );
       if (pay.value !== -1 && amount >= 0) {
         pay.label = `${pay.labelCopy} (${amount}万)`;
@@ -334,7 +334,7 @@ export default class HouseLoanCompute extends Component<any, any> {
     const baseParams: any = {};
     // 处理新版商贷利率 基点修改
     if (data.key === "commercialLoanBasePoint") {
-      baseParams.commerceLoanRateNew = fomatFloat(
+      baseParams.commerceLoanRateNew = formatFloat(
         params.loanLrp + params.commercialLoanBasePoint / 10000,
         4
       );
@@ -390,7 +390,7 @@ export default class HouseLoanCompute extends Component<any, any> {
    * 处理切换计算方式时，贷款总额或房屋总价
    */
   handleAmount = (value: string | number, ratio: number) => {
-    return fomatFloat(parseInt(value + "", 10) * (1 - ratio), 1);
+    return formatFloat(parseInt(value + "", 10) * (1 - ratio), 1);
   };
 
   /**
@@ -405,7 +405,7 @@ export default class HouseLoanCompute extends Component<any, any> {
       const { params } = this.state;
       const { downPayRate, loanAmount } = params;
       params.houseTotal = Math.floor(
-        fomatFloat(loanAmount / (1 - downPayRate), 1) as number
+        formatFloat(loanAmount / (1 - downPayRate), 1) as number
       );
       obj = { params };
       this.handleDownPaySelectLabel(params.houseTotal);
@@ -413,7 +413,7 @@ export default class HouseLoanCompute extends Component<any, any> {
     if (data.key === "way" && index === 0) {
       const { params } = this.state;
       const { loanAmount } = params;
-      params.loanAmount = Math.ceil(fomatFloat(loanAmount, 1) as number);
+      params.loanAmount = Math.ceil(formatFloat(loanAmount, 1) as number);
       obj = { params };
     }
     this.setState(
@@ -605,11 +605,11 @@ export default class HouseLoanCompute extends Component<any, any> {
       loanAmount,
       downPayRate
     } = params;
-    const downPayRateStr = `首付${fomatFloat(downPayRate * 100, 2)}%`;
+    const downPayRateStr = `首付${formatFloat(downPayRate * 100, 2)}%`;
     const accumulatStr = `公积金贷${
       loanType === 2 ? loanAmount : accumulatTotalPirce
-    }万·${accumulatFundYear}年·利率${fomatFloat(accumulatFundRate * 100, 2)}%`;
-    const commerceLoanRateStr = `${fomatFloat(
+    }万·${accumulatFundYear}年·利率${formatFloat(accumulatFundRate * 100, 2)}%`;
+    const commerceLoanRateStr = `${formatFloat(
       (loanLrpType === 1 ? commerceLoanRateNew : commerceLoanRate) * 100,
       2
     )}`;
@@ -756,7 +756,7 @@ export default class HouseLoanCompute extends Component<any, any> {
             <View
               className="keyboard-box"
               style={{
-                bottom: isAndriod() ? 0 : keyboardHeight
+                bottom: isAndroid() ? 0 : keyboardHeight
               }}
             >
               <Text className="keyboard-box-text">请输入</Text>

@@ -790,7 +790,7 @@ export const OPTION = {
       }
     ]
   },
-  defult: {
+  default: {
     commerceLoanYear: 30,
     commerceLoanRate: 0.049,
     commerceLoanInFiveYearRate: 0.0475,
