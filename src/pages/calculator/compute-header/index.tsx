@@ -13,9 +13,9 @@ import {
   PERCENT_ICON,
   RIGHT_ARROW,
   RIGHT_ARROW_WHITE
-} from "../constans";
+} from "../constants";
 import { BoxShadow, LinearGradient } from "@components";
-import { fomatFloat } from "@utils";
+import { formatFloat } from "@utils";
 
 interface HouseLoanComputeHeaderProps {
   way: number;
@@ -107,7 +107,7 @@ const HouseLoanComputeHeader: FunctionComponent<HouseLoanComputeHeaderProps> = p
             >
               {way === 1
                 ? Math.floor(
-                    fomatFloat(houseTotal * downPayRate || 0, 1) as number
+                    formatFloat(houseTotal * downPayRate || 0, 1) as number
                   )
                 : "--"}
               {way === 1 && (

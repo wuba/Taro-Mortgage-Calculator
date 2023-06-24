@@ -9,7 +9,7 @@
 import React, { Component } from "react";
 import { View, Text, Image, Input, Button } from "@tarojs/components";
 import "./index.scss";
-import { RIGHT_ARROW } from "./constans";
+import { RIGHT_ARROW } from "./constants";
 import { Pciker, Modal } from "@components";
 
 interface LineWrapProps {

@@ -13,7 +13,7 @@ import {
   MONTY_TITLE,
   CHECK_RIDIO_Y,
   CHECK_RIDIO
-} from "../constans";
+} from "../constants";
 import "./index.scss";
 import { getGlobalData, getStorageData } from "@utils";
 import { SafeAreaView, StatusBar } from "@components";

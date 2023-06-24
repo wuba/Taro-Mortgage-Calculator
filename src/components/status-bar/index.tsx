@@ -7,10 +7,10 @@
 
 import React from "react";
 import { View } from '@tarojs/components';
-import { isAndriod } from '@utils';
+import { isAndroid } from '@utils';
 
 let StatusBar: any;
-if (IS_RN && isAndriod()) {
+if (IS_RN && isAndroid()) {
   StatusBar = require('react-native').StatusBar;
 }
 
