@@ -174,3 +174,5 @@ website/package.json
 
 ## taro-react-native-release
 !release/**
+
+.swc
